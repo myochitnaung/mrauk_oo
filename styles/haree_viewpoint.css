@@ -1,0 +1,260 @@
+*{
+    margin: 0;
+    padding: 0;
+}
+
+body{
+    background-color: #c6c8cc;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    padding: 5px;
+
+}
+
+header{    
+    display: flex;
+    flex-direction: column;
+    min-height: 50px;   
+    background-color: #095233;
+}
+
+#nav_section{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-around;
+    align-items: center;
+    background-color: #3e4744fa;
+    /* padding: 10px;
+    margin-bottom: 10px; */
+}
+nav{
+    display:flex;
+    width: 100%;
+    min-height: 36px;
+    /* padding: 0px 0 0 24px; */
+    overflow: hidden;
+    
+}
+
+#nav_logo{
+    padding-left: 32px;
+}
+
+#nav_section img{
+    width: 10%;
+}
+
+nav a{
+    display:flex;
+    color: rgb(250, 248, 248);
+    text-decoration: none;    
+    line-height:15px;
+    justify-content: center;
+    align-items: center;
+    margin-right: 16px;
+    font-size: 1.2vw;
+    font-weight: 550;
+    padding: 5px;    
+}
+
+nav a:hover{
+    color: #f21212;
+}
+
+nav a.active{
+    background-color: #ffffff;
+    color: #f21212;
+}
+
+.haree_viewpoint img{
+    width: 30%;
+    height: 20%;
+    object-fit: cover;
+    grid-template: 1fr;
+    padding: 10px;
+    margin: 10px auto;
+    border-radius: 6px;
+    text-align: center;
+    align-items: center;
+    text-indent: 35%;
+
+}
+
+.haree_viewpoint img :hover{
+    display: flex;
+    box-shadow: #022014;
+    opacity: 2;
+
+ }
+
+/* footer section start  */
+footer{
+    min-height: 80px;
+    background-color: #3e4744fa;    
+    color:white;
+    font-size: 1.2vw;
+    
+}
+
+footer .social {
+    text-align: center;
+}
+
+#footer_container{
+    display: flex;
+    flex-direction: row;
+    width: 76%;
+    margin: 0 auto;
+    padding: 8px;    
+}
+
+#footer_left{
+    flex: 1;
+}
+
+#footer_right{
+    flex: 3;
+    text-align: center;
+}
+
+#footer_right a{
+    color: #ffffff;
+    padding: 5px;
+}
+
+#footer_paragraph{
+    width: 55%;
+    margin-bottom: 16px;
+}
+
+#copy_right_text{
+    display:block;
+    text-align: center;
+    margin-bottom: 8px;
+}
+
+#footer_container img{
+    width: 20%;
+    align-items: center;
+}
+
+footer .social a{
+    font-size: 24px;
+    color: inherit;
+    border: 1px solid #c6c8cc;
+    width: 40px;
+    height: 40px;
+    line-height: 38px;
+    display: inline-block;
+    text-align: center;
+    border-radius: 50%;
+    margin: 0.8px;
+    opacity: 0.75;
+}
+
+footer .social a:hover{
+    opacity: 1;
+}
+
+footer ul{
+    list-style: none;
+    display: flex;
+    justify-content: center;
+
+}
+footer ul li{
+    /* margin-right: 16px; */
+    padding: 10px;
+    text-align: center;
+}
+footer ul li a{
+    text-decoration: none;
+    color: white;
+    opacity: hover 0.3;
+}
+
+
+@media screen and (max-width: 780px) {  
+    #nav_section{
+        flex-direction: column;
+    }
+    #nav_logo{
+        padding-left:0px;
+    }
+
+    nav{
+        flex-direction: column;
+        margin:0;
+        padding:0;
+      
+        
+    }
+    nav a{
+        font-size: 1.8vw;        
+    }
+
+    section#section_jumbotron{
+        background-size: auto;
+    }
+
+    main{
+        width:100%;
+        flex-direction: column;
+        align-items: center;
+    }
+
+    main aside{
+        width: 80%;
+        padding: 0;
+        margin-top:16px;
+    }
+
+    main section#display_content{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    main section#gallery_images{
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+
+    main section#display_content article.city_card div p{
+        font-size: 1.8vw;
+    }
+
+    #footer_container{
+        flex-direction: column;
+        align-items: center;
+    }
+
+    #copy_right_text{
+        text-align: center;
+        margin-top: 8px;
+    }
+
+    footer ul{  
+        flex-direction: column;
+        align-items: center;
+    }
+
+    footer ul li{ 
+        margin-top: 8px;
+    }
+
+    footer{
+        font-size: 1.8vw;
+    }
+}
+
+@media screen and (max-width: 480px) {
+    main section#display_content{
+        grid-template-columns: 1fr;
+    }
+    main section#gallery_images{
+        grid-template-columns: 1fr;
+    }
+    main section#display_content article.city_card div p{
+        font-size: 2.4vw;
+    }
+    nav a{
+        font-size: 2.4vw;        
+    }
+}
